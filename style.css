@@ -291,4 +291,7 @@ body{
    #h4{
       margin: none;
    }
+   #cool{
+      margin:0;
+      width:100%;
 }
