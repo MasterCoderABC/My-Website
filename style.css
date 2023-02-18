@@ -209,15 +209,15 @@ body{
  }
 
  #n1{
-   background-image: url('/images/guess_the_word.jpg');
+   background-image: url('guess_the_word.jpg');
  }
 
  #n2{
-   background-image: url('/images/clock.jpg');
+   background-image: url('clock.jpg');
  }
 
  #n3{
-   background-image: url('/images/collage.jpg');
+   background-image: url('collage.jpg');
  }
 
  .gallery-cell a{
