@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+@font-face {
+   font-family: 'harry_pregular';
+   src: url('harryp-mvz6w-webfont.woff2') format('woff2'),
+        url('harryp-mvz6w-webfont.woff') format('woff');
+   font-weight: normal;
+   font-style: normal;
+ }
+
+:root{
+   --blue: #3E54AC;
+   --darkblue: #2F58CD;
+   --lightblue: #AEE2FF;
+}
+
+/* width */
+::-webkit-scrollbar {
+   width: 10px;
+ }
+ 
+ /* Track */
+ ::-webkit-scrollbar-track {
+   background: #f1f1f1; 
+ }
+  
+ /* Handle */
+ ::-webkit-scrollbar-thumb {
+   background: #555; 
+ }
+ 
+ /* Handle on hover */
+ ::-webkit-scrollbar-thumb:hover {
+   background: #383838; 
+ }
+
+body{
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #F7F7F7;
+   user-select: none;
+}
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+}
+
+#cool{
+   background-color: #151414;
+   text-align: center;
+   width: 100%;
+   height: 400px;
+   animation: text 5s ease-in;
+}
+
+#cool h1{
+   color: white;
+   padding-top: 160px;
+   font-size: 50px;
+}
+
+@keyframes text{
+   0%{
+      color: transparent;
+      letter-spacing: -24px;
+   }
+   50%{
+      letter-spacing: 14px;
+   }
+   100%{
+      letter-spacing: normal;
+   }
+}
+
+.navbar{
+   width: 100%;
+   position: fixed;
+   display: flex !important;
+   justify-content: space-between;
+   align-items: center;
+   background-color: #222222;
+   color: white;
+   user-select: none;
+   z-index: 2;
+}
+
+@keyframes background-pan{
+   from{
+      background-position: 0% center;
+   }
+   to{
+      background-position: -200% center;
+   }
+}
+
+@keyframes scale {
+   from, to {
+     transform: scale(0);
+   }
+   
+   50% {
+     transform: scale(1);
+   }
+ }
+
+ @keyframes rotate {
+   from {
+     transform: rotate(0deg);
+   }
+   
+   to {
+     transform: rotate(180deg);
+   }
+ }
+
+.brand-title{
+   display: inline-block;
+   position: relative;
+}
+
+.brand-title > .magic-star{
+   --size: clamp(20px, 1.5vw, 30px);
+
+   animation: scale 700ms ease forwards;
+   display: block;
+   height: var(--size);
+   left: var(--star-left);
+   position: absolute;
+   top: var(--star-top);
+   width: var(--size);
+}
+
+.magic-star > svg{
+   animation: rotate 1000ms linear infinite;
+   display: block;
+   opacity: 0.7;
+}
+
+.magic-star > svg > path {
+   fill: var(--darkblue);
+ }
+
+.brand-title-text{
+   font-family:'Rubik', sans-serif;
+   animation: background-pan 3s infinite linear;
+   background: linear-gradient(
+      to right,
+      var(--blue),
+      var(--darkblue),
+      var(--lightblue),
+      var(--blue)
+   );
+   background-size: 200%;
+   background-clip: text;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   white-space: nowrap;
+   font-size: 1.5rem;
+   margin: 1rem;  
+   cursor: pointer;
+}
+
+.navbar-links ul{
+   margin: 0;
+   padding: 0;
+   display: flex;
+}
+
+.navbar-links li{
+   list-style: none;
+}
+
+.navbar-links li a{
+   text-decoration: none;
+   color: #F9F9F9;
+   padding: 1rem;
+   display: block;
+}
+
+.navbar-links li:hover{
+   background-color: #383838;
+}
+
+.toggle-button{
+   position: absolute;
+   margin-top: 1.3rem;
+   right: 1rem;
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 21px;
+}
+
+.bar{
+   height: 3px;
+   width: 100%;
+   background-color: white;
+   border-radius: 10px;
+}
+
+.bar1{
+   height: 3px;
+   width: 75%;
+   background-color: white;
+   border-radius: 10px;
+}
+
+.bar2{
+   height: 3px;
+   width: 50%;
+   background-color: white;
+   border-radius: 10px;
+}
+
+#me{
+   rotate: 0deg;
+   border: 2px dashed black;
+   border-radius: 100px;
+   margin-left: 1rem;
+   cursor: pointer;
+   float: left;
+   margin-right: 2rem;
+   transition-duration: 2s;
+   transition-property: transform;
+   -webkit-transition-duration: 2s;
+   -webkit-transition-property: transform;
+}
+
+.b-img{
+   margin-left: 2rem;
+   margin-right: 1rem;
+   cursor: pointer;
+   float: left;
+}
+
+#me:hover{
+   transform: rotate(360deg);
+   -webkit-transform: rotate(360deg);
+}
+
+#h4{
+   margin-right: 15rem;
+   position: relative;
+}
+
+#aboutme{
+   background-color: #ECECEC;
+   height: fit-content;
+   padding: 15px;
+   width: 93%;
+   margin-left:2.5rem;
+   border-radius: 60px;
+   align-content: center;
+   margin-top: 10px;
+}
+
+.b-container{
+   height: 19rem;
+   padding: 15px;
+   width: 93%;
+   border-radius: 60px;
+   align-content: center;
+   border: 1.5px solid black;
+}
+
+.gs{
+   background-color: #B5F1CC;
+}
+
+.doawk{
+   background-color: #F48484;
+}
+
+.harrypotter{
+   background-color: #BFDCE5;
+   margin-top: 25px;
+}
+
+#aboutme:hover{
+   border: 2px solid black;
+}
+
+.gallery {
+   background: #EEE;
+ }
+ 
+ .gallery-cell {
+   width: 66%;
+   height: 200px;
+   margin-right: 10px;
+   border: 1px solid rgb(219, 217, 217);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: contain;
+   font-size: 30px;
+ }
+
+ .gallery-cell a:hover{
+    color:#6F1AB6;
+ }
+
+ #n1{
+   background-image: url('guess_the_word.jpg');
+ }
+
+ #n2{
+   background-image: url('clock.jpg');
+ }
+
+ #n3{
+   background-image: url('collage.jpg');
+ }
+
+ .gallery-cell a{
+   text-decoration: none;
+   color: black;
+ }
+
+.contact{
+   position: absolute;
+   margin-top: 10px;
+   font-size: 20px;
+}
+.contact-span{
+   margin-right: 170px;
+}
+.contact-span a{
+   text-decoration: none;
+}
+
+@media (max-width: 768px){
+   .brand-title{
+      margin: 1.5rem;
+   }
+   .toggle-button{
+      display: flex;
+   }
+   .navbar-links{
+      display: none;
+      width: 100%;
+   }
+   .navbar{
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 2;
+   }
+   .navbar-links ul{
+      flex-direction: column;
+      width: 100%;
+   }
+   .navbar-links li{
+      text-align: center;
+   }
+   .navbar-links li a{
+      padding: 0.7rem 1rem;
+   }
+   .navbar-links.active{
+      display: flex;
+   }
+   .img-container{
+      text-align: center;
+      width: 100%;
+   }
+   #me{
+      margin: 0;
+      float: none;
+   }
+   .b-img{
+      margin: 0;
+      float:none;
+   }
+   #aboutme{
+      height: fit-content;
+      width: fit-content;
+      padding: 5px;
+      margin-left: 1.5px;
+      border: 1.5px solid black;
+   }
+   #container{
+      margin: 0;
+   }
+   .b-container{
+      height: fit-content;
+   }
+   #h4{
+      margin: none;
+   }
+   #cool{
+      margin:0;
+      width:100%;
+   }
+}
